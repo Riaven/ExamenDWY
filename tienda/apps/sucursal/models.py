@@ -14,7 +14,7 @@ class Ciudad (models.Model):
     comuna = models.ForeignKey(Comuna, default=1, on_delete=models.CASCADE)
 
 
-    # para que retorne el nombre de la comuna
+    # para que retorne el nombre de la ciudad
     def __str__(self):
         return '{}'.format(self.nombreCiudad)
 
@@ -29,6 +29,6 @@ class Sucursal (models.Model):
     ciudad = models.ForeignKey(Ciudad, default=1, on_delete=models.CASCADE)
 
 
-    # para que retorne el nombre de la comuna
+    # para que retorne el nombre de la comuna y no el ID
     def __str__(self):
-        return '{}'.format(self.nombreCiudad)
+        return '{}'.format(self.nombreTienda)
